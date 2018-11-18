@@ -10,16 +10,16 @@
 
     <!-- This will hold the title of the game. -->
     <div class="head">
-        <h1>Crystal Collector!</h1>
+        <h1>Harry Potter Game!</h1>
     </div>
 
     <!-- This will hold the instructions for the game -->
     <div class="instructions">
         <p>You will be given a random number at the start of the game.</p>
-        <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <p>Each of the four Hogwarts houses are shown below. By clicking on a house, you will add a specific amount of points to your total score.</p>
         <p>You win the game by matching your total score to random number; however, you lose the game if your total score goes above the random number.</p>
-        <p>The value of each crystal is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+        <p>The value given to each house is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each house.</p>
     </div>
 
     <!-- This will hold the cpu gen random number -->
@@ -36,14 +36,19 @@
     </div>
 
     <!-- This wll hold all of the crystals -->
-    <div class="crystals">
-        <div class="red"></div>
-        <div class="blue"></div>
-        <div class="yellow"></div>
-        <div class="green"></div>
+    <div class="houses">
+        <div class="gryffindor"><img src="./assets/images/gryffindor2.png" height="100px" width="100px"/></div>
+        <div class="ravenclaw"><img src="./assets/images/ravenclaw.png" height="100px" width="100px" /></div>
+        <div class="hufflepuff"><img src="./assets/images/hufflepuff.png" height="100px" width="100px" /></div>
+        <div class="slytherin"><img src="./assets/images/slytherin.png" height="100px" width="100px" /></div>
     </div>
 
     <!-- This will hold the updated user score that tries to match the random score -->
+
+    <div class="totalscore">
+        <p>Your total score is: </p>
+        <span id="score">0</span>
+    </div>
 
 
 </body>
