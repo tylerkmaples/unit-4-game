@@ -5,51 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess the Gem</title>
+    
 </head>
 <body>
 
     <!-- This will hold the title of the game. -->
-    <div class="head">
-        <h1>Harry Potter Game!</h1>
+    <div id="title">
+        <h1>Guess the Gem!</h1>
     </div>
 
     <!-- This will hold the instructions for the game -->
-    <div class="instructions">
+    <div id="instructions">
         <p>You will be given a random number at the start of the game.</p>
-        <p>Each of the four Hogwarts houses are shown below. By clicking on a house, you will add a specific amount of points to your total score.</p>
+        <p>Each of the four crystals are shown below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
         <p>You win the game by matching your total score to random number; however, you lose the game if your total score goes above the random number.</p>
-        <p>The value given to each house is hidden from you until you click on it.</p>
-        <p>Each time when the game starts, the game will change the values of each house.</p>
+        <p>The value given to each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
     </div>
 
     <!-- This will hold the cpu gen random number -->
-    <div class="random-score">0</div>
+    <div class="random-score">
+        <span id="aiGuess"></span>
+    </div>
     
     <!-- This will hold the wins and losses count -->
-    <div class="count">
-        <div class="wincount">
+    <div id="count">
+        <div id="gamealert">
+            <span id="win-lose">"you win/lose goes here"</span>
+        </div>
+
+        <div id="wincount">
             Wins: <span id="wins">0</span>
         </div>
-        <div class="losscount">
+        <div id="losscount">
             Losses: <span id="losses">0</span>
         </div>
     </div>
 
     <!-- This wll hold all of the crystals -->
-    <div class="houses">
-        <div class="gryffindor"><img src="./assets/images/gryffindor2.png" height="100px" width="100px"/></div>
-        <div class="ravenclaw"><img src="./assets/images/ravenclaw.png" height="100px" width="100px" /></div>
-        <div class="hufflepuff"><img src="./assets/images/hufflepuff.png" height="100px" width="100px" /></div>
-        <div class="slytherin"><img src="./assets/images/slytherin.png" height="100px" width="100px" /></div>
+    <div class="crystals">
+        <div id="red"><img src="./assets/images/red-crystal1.png" height="100px" width="100px"/></div>
+        <div id="blue"><img src="./assets/images/blue-crystal2.png" height="100px" width="100px" /></div>
+        <div id="yellow"><img src="./assets/images/yellow-crystal.png" height="100px" width="100px" /></div>
+        <div id="green"><img src="./assets/images/green-crystal.png" height="100px" width="100px" /></div>
     </div>
 
     <!-- This will hold the updated user score that tries to match the random score -->
 
     <div class="totalscore">
         <p>Your total score is: </p>
-        <span id="score">0</span>
+        <span id="score"></span>
     </div>
 
 
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>
 </body>
 </html>
