@@ -44,12 +44,44 @@ $(document).ready(function() {
         crystals.blue.value = ranNum(1, 12);
         crystals.yellow.value = ranNum(1, 12);
         crystals.green.value = ranNum(1, 12);
-
+       
         // send the score values to their home sweet home
 
         $("#score").text(userScore);
         $("#aiGuess").text(cpuScore);
     }
+
+    // make function that takes the randomized crystals value and adds them together when clicked. 
+
+    var crystalValue = function() {
+        userScore += crystals.value
+        $("#score").text(userScore);
+    }
+
+    $("#red").on("click", function() {
+        crystalValue(crystals.red);
+    })
+
+
+    // Logic win/lose
+
+    var check = function () {
+        if (userScore > cpuScore) {
+            $("#win-lose").text("You Lose!");
+            $("#losses").text(losses);
+            losses++;
+            start();
+        }
+
+        else if (userScore === cpuScore) {
+            $("#win-lose").text("You Win!");
+            $("#wins").text(wins);
+            wins++;
+            start();
+        }
+    }
+
+start();
 
 
 
