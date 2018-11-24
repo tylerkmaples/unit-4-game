@@ -1,3 +1,101 @@
 body {
     background-image: url(../images/halftone.png);
+    font-family: 'Roboto', sans-serif;
 }
+
+.row {
+    background: lightblue;
+    padding: 5px;
+    margin-left: 0;
+    margin-top: 0;
+    width: 33%;
+}
+
+#instructions {
+    background: khaki;
+    width: 33%;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.random-score {
+    float: left;
+    margin-top: 15px;
+    background: lightpink;
+    width: 20%;
+    height: 70px;
+    font-size: 40px;
+    text-align: center;
+    padding: 5px;
+}
+
+.crystals {
+    float: left;
+    margin-left: 150px;
+    margin-top: 15px;
+}
+
+#red {
+    float: left;
+    /* margin-left: 200px; */
+    margin-right: 60px;
+}
+
+#red:active {
+    background: maroon;
+}
+
+#blue {
+    float: left;
+    margin-right: 60px;
+}
+
+#blue:active {
+    background: royalblue;
+}
+
+#yellow {
+    float: left;
+    margin-right: 60px;
+}
+
+#yellow:active {
+    background: orange;
+}
+
+#green {
+    float: left;
+}
+
+#green:active {
+    background: green;
+}
+
+img {
+    cursor: pointer;
+}
+
+.totalscore {
+    float: right;
+    background: lightgreen;
+    width: 20%;
+    height: 70%;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+#count {
+    clear: both;
+    background: lightseagreen;
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+    padding: 15px;
+    width: 33%;
+    font-size: 19px;
+}
+
+

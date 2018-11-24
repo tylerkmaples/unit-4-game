@@ -5,65 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess the Gem</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href= "./assets/css/style.css" >
 </head>
 <body>
-    <div class="container">
-        <!-- This will hold the title of the game. -->
-        <div id="title">
-            <h1>Guess the Gem!</h1>
-        </div>
 
-        <!-- This will hold the instructions for the game -->
-        <div id="instructions">
-            <p>You will be given a random number at the start of the game.</p>
-            <p>Each of the four crystals are shown below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
-            <p>You win the game by matching your total score to random number; however, you lose the game if your total score goes above the random number.</p>
-            <p>The value given to each crystal is hidden from you until you click on it.</p>
-            <p>Each time when the game starts, the game will change the values of each crystal.</p>
-        </div>
-
-        <!-- This will hold the cpu gen random number -->
-        <div class="random-score">
-            <span id="aiGuess"></span>
-        </div>
-        
-        <!-- This will hold the wins and losses count -->
-        <div id="count">
-            <div id="gamealert">
-                <span id="win-lose"></span>
-            </div>
-
-            <div id="wincount">
-                Wins: <span id="wins">0</span>
-            </div>
-            <div id="losscount">
-                Losses: <span id="losses">0</span>
+    <!-- This will hold the title of the game. -->
+    <div class="row">
+        <div class="col-md-12">
+            <div id="title">
+                <h1>Guess the Gem!</h1>
             </div>
         </div>
-
-        <!-- This wll hold all of the crystals -->
-        <div class="crystals">
-            <div id="red"><img src="./assets/images/red-crystal1.png" height="100px" width="100px"/></div>
-            <div id="blue"><img src="./assets/images/blue-crystal2.png" height="100px" width="100px" /></div>
-            <div id="yellow"><img src="./assets/images/yellow-crystal.png" height="100px" width="100px" /></div>
-            <div id="green"><img src="./assets/images/green-crystal.png" height="100px" width="100px" /></div>
-        </div>
-
-        <!-- This will hold the updated user score that tries to match the random score -->
-
-        <div class="totalscore">
-            <p>Your total score is: </p>
-            <span id="score"></span>
-        </div>
-
-
-
-
-
-        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-        <script src="./assets/javascript/game.js"></script>
     </div>
+        
+
+    <!-- This will hold the instructions for the game -->
+    <div id="instructions">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>Each of the four crystals are shown below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+        <p>You win the game by matching your total score to random number; however, you lose the game if your total score goes above the random number.</p>
+        <p>The value given to each crystal is hidden from you until you click on it.</p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
+
+    <!-- This will hold the cpu gen random number -->
+    <div class="random-score">
+        <span id="aiGuess"></span>
+    </div>
+    
+    <!-- This wll hold all of the crystals -->
+    <div class="crystals">
+        <div id="red"><img src="./assets/images/red-crystal4.png" height="100px" width="100px"/></div>
+        <div id="blue"><img src="./assets/images/blue-crystal2.png" height="100px" width="100px" /></div>
+        <div id="yellow"><img src="./assets/images/yellow-crystal.png" height="100px" width="100px" /></div>
+        <div id="green"><img src="./assets/images/green-crystal.png" height="100px" width="100px" /></div>
+    </div>
+
+    <!-- This will hold the updated user score that tries to match the random score -->
+
+    <div class="totalscore">
+        <p>Your total score is: </p>
+        <span id="score"></span>
+    </div>
+
+    <!-- This will hold the wins and losses count -->
+    <div id="count">
+        <div id="gamealert">
+            <span id="win-lose"></span>
+        </div>
+
+        <div id="wincount">
+            Wins: <span id="wins">0</span>
+        </div>
+        <div id="losscount">
+            Losses: <span id="losses">0</span>
+        </div>
+    </div>
+
+    <!-- Link to JS/JQ -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>    
+
 </body>
 </html>

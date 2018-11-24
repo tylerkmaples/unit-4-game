@@ -51,15 +51,43 @@ $(document).ready(function() {
         $("#aiGuess").text(cpuScore);
     }
 
+    start();
     // make function that takes the randomized crystals value and adds them together when clicked. 
 
-    var crystalValue = function() {
-        userScore += crystals.value
-        $("#score").text(userScore);
-    }
+    // Tried to make this function but wasn't sure how to make it work correctly. Would display NaN on the page, so place it into each onclick.
+        // var crystalValue = function() {
+        //     userScore += crystals.value;
+        //     $("#score").text(userScore);
+        //     check();
+            
+        // }
 
     $("#red").on("click", function() {
-        crystalValue(crystals.red);
+        userScore += crystals.red.value;
+        $("#score").html(userScore);
+        check();
+        
+    })
+
+    $("#blue").on("click", function() {
+        userScore += crystals.blue.value;
+        $("#score").html(userScore);
+        check();
+        
+    })
+
+    $("#yellow").on("click", function() {
+        userScore += crystals.yellow.value;
+        $("#score").html(userScore);
+        check();
+        
+    })
+
+    $("#green").on("click", function() {
+        userScore += crystals.green.value;
+        $("#score").html(userScore);
+        check();
+        
     })
 
 
@@ -68,32 +96,18 @@ $(document).ready(function() {
     var check = function () {
         if (userScore > cpuScore) {
             $("#win-lose").text("You Lose!");
-            $("#losses").text(losses);
             losses++;
+            $("#losses").text(losses);
             start();
         }
 
         else if (userScore === cpuScore) {
             $("#win-lose").text("You Win!");
-            $("#wins").text(wins);
             wins++;
+            $("#wins").text(wins);
             start();
         }
     }
-
-start();
-
-
-
-
-
-
-
-
-
-
-
-
 
 })
     
