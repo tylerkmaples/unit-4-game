@@ -8,7 +8,8 @@ Four crystals are on the screen, each having a random numerical value. The playe
 the total score. The player wins if their total score matches the random number from the beginning of the game; however, they lose if the score goes above the random number.
 
 
-* Built With
+#### Built With
+----------------
   * HTML
   * CSS
   * Javascript/jQuery
